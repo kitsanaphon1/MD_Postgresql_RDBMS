@@ -12,7 +12,7 @@
 sudo apt-cache search postgresql | grep postgresql && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null && sudo apt update -y && sudo apt install -y postgresql && sudo systemctl enable postgresql && sudo systemctl start postgresql && systemctl status postgresql && psql --version
 ```
 
-#### 2.สร้างโปเดอร์สำหรับที่จะเก็บข้อมูล backup และ wal archive
+#### 2.สร้างโปเดอร์สำหรับที่จะเก็บข้อมูล backup และ wal archives
 โดยใช้คำสั่งด่านล่างนี้ path เราจะเป็น `/var/lib/postgresql` หากพิม `pwd` เพื่อตรวจสอบ path
 ```
 sudo su - postgres
